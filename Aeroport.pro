@@ -26,7 +26,9 @@ CONFIG += c++11
 
 SOURCES += \
         dialog_infouser.cpp \
+        passenger.cpp \
         plane.cpp \
+        ticket.cpp \
         user.cpp \
         window_authorization.cpp \
         window_registration.cpp \
@@ -37,7 +39,9 @@ SOURCES += \
 HEADERS += \
         config.h \
         dialog_infouser.h \
+        passenger.h \
         plane.h \
+        ticket.h \
         user.h \
         window_authorization.h \
         window_registration.h \
