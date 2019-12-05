@@ -18,7 +18,7 @@ public:
 	explicit Window_WorkWidget(User &user, QWidget *parent = nullptr);
 	~Window_WorkWidget();
 
-    const QList<Plane> &listTrains() const;
+    const QList<Plane> &listPlanes() const;
 
 public slots:
     //void addRace(Plane train);
@@ -26,11 +26,8 @@ public slots:
     //void deleteRace(int row);
 
 private slots:
-	// Открытие окна информации о пользователе
 	void on_infoUser_clicked();
-	// Открытие окна с меню администратора
-    //void on_menuAdmin_clicked();
-	// Открытие меню кассира
+    void on_menuAdmin_clicked();
     //void menuCashier(int row, int column);
 
     //void on_lineFind_textChanged(const QString &arg1);
@@ -51,7 +48,7 @@ private:
 	// мы могли корректно удалить это окно.
 	Dialog_InfoUser *m_infoDialog;
 
-    QList<Plane> m_listTrains;
+    QList<Plane> m_listPlanes;
 
     //void loadTrains();
 };

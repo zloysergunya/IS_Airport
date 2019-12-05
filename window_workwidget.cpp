@@ -3,7 +3,7 @@
 
 #include "config.h"
 #include "dialog_infouser.h"
-//#include "dialog_menuadmin.h"
+#include "dialog_menuadmin.h"
 //#include "dialog_menucashier.h"
 
 #include <QFile>
@@ -56,3 +56,16 @@ void Window_WorkWidget::on_infoUser_clicked()
 	}
 }
 
+void Window_WorkWidget::on_menuAdmin_clicked()
+{
+    // Создаем окно с меню администратора и вызываем его
+    Dialog_MenuAdmin dialog(this);
+    dialog.setWindowTitle(Config::nameApplication);
+
+    dialog.exec();
+}
+
+const QList<Plane> &Window_WorkWidget::listPlanes() const
+{
+    return m_listPlanes;
+}

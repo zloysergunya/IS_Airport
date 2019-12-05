@@ -25,7 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        dialog_adduser.cpp \
+        dialog_controlusers.cpp \
         dialog_infouser.cpp \
+        dialog_menuadmin.cpp \
         passenger.cpp \
         plane.cpp \
         ticket.cpp \
@@ -38,7 +41,10 @@ SOURCES += \
 
 HEADERS += \
         config.h \
+        dialog_adduser.h \
+        dialog_controlusers.h \
         dialog_infouser.h \
+        dialog_menuadmin.h \
         passenger.h \
         plane.h \
         ticket.h \

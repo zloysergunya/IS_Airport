@@ -71,7 +71,7 @@ int Plane::countSeats() const
     return m_countSeats;
 }
 
-void Plane::setСountSeats(int countSeats)
+void Plane::setCountSeats(int countSeats)
 {
     m_countSeats = countSeats;
 }
@@ -81,7 +81,7 @@ int Plane::countFreeSeats() const
     return m_countFreeSeats;
 }
 
-void Plane::setСountFreeSeats(int countFreeSeats)
+void Plane::setCountFreeSeats(int countFreeSeats)
 {
     m_countFreeSeats = countFreeSeats;
 }
