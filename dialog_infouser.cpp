@@ -8,8 +8,7 @@ Dialog_InfoUser::Dialog_InfoUser(const User &user, QWidget *parent) :
     mUi(new Ui::Dialog_InfoUser)
 {
     mUi->setupUi(this);
-
-    // Выводим информацию на виджеты
+    this->setStyleSheet("background-color: #a8faff;");
     mUi->labelLogin->setText(user.login());
     mUi->labelPassword->setText(user.password());
     mUi->labelStatus->setText(user.statusString());

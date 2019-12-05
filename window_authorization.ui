@@ -44,7 +44,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Имя пользователя:</string>
+        <string>Логин:</string>
        </property>
       </widget>
      </item>

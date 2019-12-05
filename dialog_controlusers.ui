@@ -43,11 +43,11 @@
      <attribute name="horizontalHeaderCascadingSectionResizes">
       <bool>false</bool>
      </attribute>
-     <attribute name="horizontalHeaderMinimumSectionSize">
-      <number>35</number>
-     </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
       <number>150</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>35</number>
      </attribute>
      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
       <bool>false</bool>
@@ -57,7 +57,7 @@
      </attribute>
      <column>
       <property name="text">
-       <string>Имя пользователя</string>
+       <string>Логин</string>
       </property>
      </column>
      <column>
@@ -83,7 +83,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Повысить статус</string>
+           <string>Повысить</string>
           </property>
          </widget>
         </item>
@@ -95,7 +95,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Понизить статус</string>
+           <string>Понизить</string>
           </property>
          </widget>
         </item>

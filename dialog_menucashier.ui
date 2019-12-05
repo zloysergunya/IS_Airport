@@ -45,7 +45,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Номер поезда:</string>
+        <string>Номер самолета:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -53,7 +53,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="numberTrain">
+      <widget class="QLabel" name="numberPlane">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -82,12 +82,12 @@
         </font>
        </property>
        <property name="text">
-        <string>Количество вагонов:</string>
+        <string>Количество пассажиров:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="countWagons">
+      <widget class="QLabel" name="countPassengers">
        <property name="font">
         <font>
          <pointsize>10</pointsize>

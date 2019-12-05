@@ -22,7 +22,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Информация о пользователе</string>
+      <string>Личный кабинет</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -55,7 +55,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Имя:</string>
+        <string>Логин:</string>
        </property>
       </widget>
      </item>
@@ -144,7 +144,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Сменить пользователя</string>
+        <string>Выйти</string>
        </property>
        <property name="default">
         <bool>false</bool>
@@ -175,7 +175,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Принять</string>
+        <string>Отлично!</string>
        </property>
       </widget>
      </item>

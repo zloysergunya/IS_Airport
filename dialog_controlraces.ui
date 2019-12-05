@@ -50,16 +50,6 @@
      </column>
      <column>
       <property name="text">
-       <string>Дата</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Время отправления</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
        <string>Пункт отправления</string>
       </property>
      </column>
@@ -70,7 +60,22 @@
      </column>
      <column>
       <property name="text">
-       <string>Кол-во вагонов</string>
+       <string>Марка самолета</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Количество мест</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Количество свободных мест</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Количество пассажиров</string>
       </property>
      </column>
     </widget>

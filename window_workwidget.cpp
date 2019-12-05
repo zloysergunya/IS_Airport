@@ -4,7 +4,7 @@
 #include "config.h"
 #include "dialog_infouser.h"
 #include "dialog_menuadmin.h"
-//#include "dialog_menucashier.h"
+#include "dialog_menucashier.h"
 
 #include <QFile>
 #include <QDataStream>
@@ -17,14 +17,12 @@ Window_WorkWidget::Window_WorkWidget(User &user, QWidget *parent) :
 	m_user(user)
 {
 	mUi->setupUi(this);
-	// Устанавливаем ширину столбцов под размер содержимого.
+    this->setStyleSheet("background-color: #a8faff;");
 	mUi->tableRaces->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
-	// Выделяем память под окно с информацией о пользователе
 	m_infoDialog = new Dialog_InfoUser(m_user, this);
 	m_infoDialog->setWindowTitle(Config::nameApplication);
 
-	// Если статус пользователя не равен Администратору, то прячем кнопку с открытием меню администратора
 	if (m_user.status() != User::Admin)
 		mUi->menuAdmin->hide();
 
@@ -32,35 +30,38 @@ Window_WorkWidget::Window_WorkWidget(User &user, QWidget *parent) :
 		connect(mUi->tableRaces, SIGNAL(cellActivated(int, int)),
 				this, SLOT(menuCashier(int, int)));
 
-	// Загружаем список поездов и вагонов из файла в лист и таблицу
     //loadTrains();
 }
 
 Window_WorkWidget::~Window_WorkWidget()
 {
-	// Очищаем память
 	delete mUi;
 	delete m_infoDialog;
 
 	delete &m_user;
 }
 
-
 void Window_WorkWidget::on_infoUser_clicked()
 {
-	// Если была нажата кнопка "Сменить пользователя" то окно вернет значение QDialog::Accepted
-	// Иначе же QDialog::Rejected
 	if (m_infoDialog->exec() == QDialog::Accepted) {
-		// Посылаем сигнал об необходимости сменить пользователя
 		emit changeUser();
 	}
 }
 
 void Window_WorkWidget::on_menuAdmin_clicked()
 {
-    // Создаем окно с меню администратора и вызываем его
     Dialog_MenuAdmin dialog(this);
     dialog.setWindowTitle(Config::nameApplication);
+    dialog.exec();
+}
+
+void Window_WorkWidget::menuCashier(int row, int /*column*/)
+{
+    const Plane &plane = m_listPlanes[row];
+    Dialog_MenuCashier dialog(row, plane, this);
+    dialog.setWindowTitle(Config::nameApplication);
+    connect(&dialog, SIGNAL(editedRace(int, Train)),
+            this, SLOT(editRace(int, Train)));
 
     dialog.exec();
 }

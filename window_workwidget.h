@@ -21,14 +21,14 @@ public:
     const QList<Plane> &listPlanes() const;
 
 public slots:
-    //void addRace(Plane train);
-    //void editRace(int row, Plane train);
+    //void addRace(Plane plane);
+    //void editRace(int row, Plane plane);
     //void deleteRace(int row);
 
 private slots:
 	void on_infoUser_clicked();
     void on_menuAdmin_clicked();
-    //void menuCashier(int row, int column);
+    void menuCashier(int row, int column);
 
     //void on_lineFind_textChanged(const QString &arg1);
 

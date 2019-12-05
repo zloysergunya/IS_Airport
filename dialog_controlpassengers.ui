@@ -22,7 +22,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Управление вагонами</string>
+      <string>Управление пассажирами</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

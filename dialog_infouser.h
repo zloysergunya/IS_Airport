@@ -8,7 +8,6 @@ namespace Ui {
 class Dialog_InfoUser;
 }
 
-// Окно с просмотром информации о пользователе
 class Dialog_InfoUser : public QDialog
 {
     Q_OBJECT

@@ -24,11 +24,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+win32 {
+        RC_FILE += file.rc
+        OTHER_FILES += file.rc
+}
+
 SOURCES += \
+        dialog_addrace.cpp \
         dialog_adduser.cpp \
+        dialog_controlraces.cpp \
         dialog_controlusers.cpp \
         dialog_infouser.cpp \
         dialog_menuadmin.cpp \
+        dialog_menucashier.cpp \
         passenger.cpp \
         plane.cpp \
         ticket.cpp \
@@ -41,10 +49,13 @@ SOURCES += \
 
 HEADERS += \
         config.h \
+        dialog_addrace.h \
         dialog_adduser.h \
+        dialog_controlraces.h \
         dialog_controlusers.h \
         dialog_infouser.h \
         dialog_menuadmin.h \
+        dialog_menucashier.h \
         passenger.h \
         plane.h \
         ticket.h \

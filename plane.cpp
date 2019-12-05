@@ -85,3 +85,13 @@ void Plane::setCountFreeSeats(int countFreeSeats)
 {
     m_countFreeSeats = countFreeSeats;
 }
+
+QList<Passenger> Plane::listPassengers() const
+{
+    return m_listPassengers;
+}
+
+void Plane::setListPassengers(const QList<Passenger> &listPassengers)
+{
+    m_listPassengers = listPassengers;
+}

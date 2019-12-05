@@ -22,7 +22,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Меню Администратора</string>
+      <string>Администрирование</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -89,7 +89,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Принять</string>
+        <string>Я прекрасен</string>
        </property>
       </widget>
      </item>

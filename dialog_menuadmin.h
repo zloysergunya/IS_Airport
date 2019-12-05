@@ -18,7 +18,7 @@ public:
 
 private slots:
     void on_buttonControlUsers_clicked();
-    // void on_buttonControlRaces_clicked();
+    void on_buttonControlRaces_clicked();
 
 private:
     Ui::Dialog_MenuAdmin *mUi;

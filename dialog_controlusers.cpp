@@ -15,6 +15,7 @@ Dialog_ControlUsers::Dialog_ControlUsers(QWidget *parent) :
     mUi(new Ui::Dialog_ControlUsers)
 {
     mUi->setupUi(this);
+    this->setStyleSheet("background-color: #a8faff;");
 
     QFile file(Config::fileUsers);
     if (file.open(QIODevice::ReadOnly)) {
