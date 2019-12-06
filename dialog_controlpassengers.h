@@ -22,7 +22,6 @@ private slots:
     void on_buttonAdd_clicked();
     void on_buttonEdit_clicked();
     void on_buttonDelete_clicked();
-
     void on_lineFind_textChanged(const QString &arg1);
 
 private:

@@ -12,7 +12,6 @@ class Window_Registration : public QWidget
 	Q_OBJECT
 
 public:
-	// Данное перечисление определяет какого пользователя будет регистрировать класс.
 	enum TypeRegistration { Passenger, Admin };
 
 	explicit Window_Registration(TypeRegistration typeReg, QWidget *parent = nullptr);
@@ -21,12 +20,9 @@ public:
 private:
 	Ui::Window_Registration *mUi;
 	TypeRegistration m_typeReg;
-
-	// Проверка на существование логина
 	bool isLoginExists(const QString &login);
 
 signals:
-	// Сигнал сообщающий об необходимости открыть окно Авторизации
 	void openAuthorization();
 
 private slots:

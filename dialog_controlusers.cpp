@@ -64,11 +64,9 @@ void Dialog_ControlUsers::slotUpAndDownStatus()
             QFile write_file("buf_file_users");
             write_file.open(QIODevice::WriteOnly);
 
-            // Создаем потоки
             QDataStream read_ist(&read_file);
             QDataStream write_ist(&write_file);
 
-            // Начинаем считывать
             while (!read_ist.atEnd()) {
                 User user;
                 read_ist >> user;

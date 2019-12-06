@@ -19,14 +19,10 @@ public:
 private:
 	Ui::Window_Authorization *mUi;
 
-	// Если возвратом будет nullptr - значит такой пользователь не найден
-	// Иначе же функция вернет указатель на данные пользователя
 	User *checkUser(const QString &login, const QString &password);
 
 signals:
-	// Сигнал сообщающий об необходимости открыть окно регистрации
 	void openRegistration();
-	// Сигнал сообщающий об успешном входе и посылающей информации об пользователе выполнившем вход
 	void succesfulEntry(User*);
 
 private slots:
