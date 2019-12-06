@@ -13,8 +13,7 @@ public:
     ~MainWidget();
 
 private:
-    QWidget *m_currentWidget;	// текущий отображаемый виджет
-                                // (авторизация, регистрация, окно с таблицами)
+    QWidget *m_currentWidget;
 
 private slots:
     void slotOpenAuthorization();

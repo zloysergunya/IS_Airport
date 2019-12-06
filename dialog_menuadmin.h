@@ -7,7 +7,6 @@ namespace Ui {
 class Dialog_MenuAdmin;
 }
 
-// Окно со всеми возможностями админа
 class Dialog_MenuAdmin : public QDialog
 {
     Q_OBJECT
