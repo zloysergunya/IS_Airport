@@ -67,7 +67,7 @@ void Dialog_AddUser::accept()
     else if (password.size() < 6 || password.size() > 15) {
         mUi->labelError->setText("Ошибка: пароль должен содержать от 6 до 15 символов!");
     }
-    else { // Если всё ОК...
+    else {
         m_user.setData(login, password, status);
 
         QDialog::accept();

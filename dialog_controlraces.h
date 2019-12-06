@@ -18,7 +18,7 @@ public:
 
 private slots:
     void on_buttonAddRace_clicked();
-    // void on_buttonEditRace_clicked();
+    void on_buttonEditRace_clicked();
     void on_buttonDeleteRace_clicked();
 
     void on_lineFind_textChanged(const QString &arg1);

@@ -30,8 +30,10 @@ win32 {
 }
 
 SOURCES += \
+        dialog_addpassenger.cpp \
         dialog_addrace.cpp \
         dialog_adduser.cpp \
+        dialog_controlpassengers.cpp \
         dialog_controlraces.cpp \
         dialog_controlusers.cpp \
         dialog_infouser.cpp \
@@ -49,8 +51,10 @@ SOURCES += \
 
 HEADERS += \
         config.h \
+        dialog_addpassenger.h \
         dialog_addrace.h \
         dialog_adduser.h \
+        dialog_controlpassengers.h \
         dialog_controlraces.h \
         dialog_controlusers.h \
         dialog_infouser.h \

@@ -3,7 +3,7 @@
 
 #include <QDialog>
 class Plane;
-class Dialog_ControlWagons;
+class Dialog_ControlPassengers;
 
 namespace Ui {
 class Dialog_AddRace;
@@ -25,13 +25,13 @@ private:
     QString m_startNumberPlane;
     Plane *m_plane;
     const QList<Plane> &m_listPlanes;
-    Dialog_ControlWagons *m_dialogControlPassengers;
+    Dialog_ControlPassengers *m_dialogControlPassengers;
 
 public slots:
     void accept();
 
 private slots:
-    // void on_buttonEditWagons_clicked();
+    void on_buttonEditPassengers_clicked();
 };
 
 #endif // DIALOG_ADDRACE_H

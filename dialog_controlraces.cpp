@@ -72,40 +72,30 @@ void Dialog_ControlRaces::on_buttonAddRace_clicked()
     }
 }
 
-//void Dialog_ControlRaces::on_buttonEditRace_clicked()
-//{
-//	// Проверяем какая страка была выбрана для редактирования
-//	int currentRow = mUi->tableRaces->currentRow();
-//	// Если строка не выбрана то currentRow будет равно -1
-//	if (currentRow != -1) {
-//		// Создаем копию выбранного рейса.
-//		Train train = m_listTrains[currentRow];
-//		// Создаем окно и передаем ему ссылку на объект поезда
-//		// Также устанавливаем значение что наш поезд будет "Редактироваться"
-//		Dialog_AddRace dialog(&train, m_listTrains, Dialog_AddRace::Edit, this);
-//		dialog.setWindowTitle(windowTitle());
+void Dialog_ControlRaces::on_buttonEditRace_clicked()
+{
+    int currentRow = mUi->tableRaces->currentRow();
+    if (currentRow != -1) {
+        Plane plane = m_listPlanes[currentRow];
+        Dialog_AddRace dialog(&plane, m_listPlanes, Dialog_AddRace::Edit, this);
+        dialog.setWindowTitle(windowTitle());
 
-//		// Если окно было закрыто нажатием на кнопку "Ок"
-//		if (dialog.exec() == QDialog::Accepted) {
-//			// Посылаем сигнал в главный класс (Window_WorkWidget) в котором будет
-//			// выполнена перезапись в файл и обновлена таблица.
-//			// Передаем изменяемую строку и новые данные поезда.
-//			emit editedRace(currentRow, train);
+        if (dialog.exec() == QDialog::Accepted) {
+            emit editedRace(currentRow, plane);
 
-//			// Изменяем данные таблицы для текущего окна
-//			mUi->tableRaces->item(currentRow, 0)->setText(QString::number(train.number()));
-//			mUi->tableRaces->item(currentRow, 1)->setText(train.date().toString("dd.MM.yyyy"));
-//			mUi->tableRaces->item(currentRow, 2)->setText(train.time().toString("hh:mm"));
-//			mUi->tableRaces->item(currentRow, 3)->setText(train.routeFrom());
-//			mUi->tableRaces->item(currentRow, 4)->setText(train.routeTo());
-//			mUi->tableRaces->item(currentRow, 5)->setText(
-//						QString::number(train.listWagons().size()));
-//		}
-//	}
-//	else {
-//		QMessageBox::warning(this, windowTitle(), "Ошибка: не выбран ни один рейс!");
-//	}
-//}
+            mUi->tableRaces->item(currentRow, 0)->setText(plane.number());
+            mUi->tableRaces->item(currentRow, 1)->setText(plane.departure());
+            mUi->tableRaces->item(currentRow, 2)->setText(plane.arrival());
+            mUi->tableRaces->item(currentRow, 3)->setText(plane.mark());
+            mUi->tableRaces->item(currentRow, 4)->setText(QString::number(plane.countSeats()));
+            mUi->tableRaces->item(currentRow, 5)->setText(QString::number(plane.countFreeSeats()));
+            mUi->tableRaces->item(currentRow, 6)->setText(QString::number(plane.listPassengers().size()));
+        }
+    }
+    else {
+        QMessageBox::warning(this, windowTitle(), "Ошибка: не выбран ни один рейс!");
+    }
+}
 
 void Dialog_ControlRaces::on_buttonDeleteRace_clicked()
 {

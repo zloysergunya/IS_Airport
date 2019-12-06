@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_ControlWagons</class>
- <widget class="QDialog" name="Dialog_ControlWagons">
+ <class>Dialog_ControlPassengers</class>
+ <widget class="QDialog" name="Dialog_ControlPassengers">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -30,37 +30,6 @@
     </widget>
    </item>
    <item>
-    <layout class="QFormLayout" name="formLayout">
-     <property name="labelAlignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelTrain">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Поезд №:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="number_train">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
     <widget class="QTableWidget" name="tableWagons">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -82,27 +51,27 @@
      </attribute>
      <column>
       <property name="text">
-       <string>Номер</string>
+       <string>Имя</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Тип</string>
+       <string>Фамилия</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Число мест</string>
+       <string>Отчество</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Свободно мест</string>
+       <string>Паспорт</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Стоимость билета</string>
+       <string>Рейс</string>
       </property>
      </column>
     </widget>
@@ -261,7 +230,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ControlWagons</receiver>
+   <receiver>Dialog_ControlPassengers</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

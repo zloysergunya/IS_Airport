@@ -3,7 +3,7 @@
 
 #include "config.h"
 #include "plane.h"
-// #include "dialog_controlpassengers.h"
+#include "dialog_controlpassengers.h"
 
 Dialog_AddRace::Dialog_AddRace(Plane *plane, const QList<Plane> &listPlanes, Type type, QWidget *parent) :
     QDialog(parent),
@@ -28,15 +28,14 @@ Dialog_AddRace::Dialog_AddRace(Plane *plane, const QList<Plane> &listPlanes, Typ
         mUi->mainLabel->setText("Добавление рейса");
     }
 
-//	m_dialogControlPassengers = new m_dialogControlPassengers(plane->listPassengers(), this);
-//	m_dialogControlPassengers->setNumberTrain(plane->number());
-//	m_dialogControlPassengers->setWindowTitle(Config::nameApplication);
+    m_dialogControlPassengers = new Dialog_ControlPassengers(plane->listPassengers(), this);
+    m_dialogControlPassengers->setWindowTitle(Config::nameApplication);
 }
 
 Dialog_AddRace::~Dialog_AddRace()
 {
     delete mUi;
-    // delete m_dialogControlWagons;
+    delete m_dialogControlPassengers;
 }
 
 void Dialog_AddRace::accept()
@@ -48,7 +47,7 @@ void Dialog_AddRace::accept()
     QString arrival = mUi->edit_arrival->text();
     QString mark = mUi->edit_mark->text();
     int countSeats = mUi->edit_countSeats->value();
-
+    int countFreeSeats = countSeats;
     if (number.isEmpty() ||
         departure.isEmpty() ||
         arrival.isEmpty() ||
@@ -66,15 +65,12 @@ void Dialog_AddRace::accept()
             }
         }
 
-        //m_plane->setData(number, date, time, routeFrom, routeTo, m_dialogControlPassengers->listPassengers());
+        m_plane->setData(number, departure, arrival, mark, countSeats, countFreeSeats, m_dialogControlPassengers->listPassengers());
         QDialog::accept();
     }
 }
 
-//void Dialog_AddRace::on_buttonEditWagons_clicked()
-//{
-//    // Изменяем номер поезда на текущий (или измененный)
-//    m_dialogControlWagons->setNumberTrain(mUi->number->value());
-//    // Вызываем открытие окна.
-//    m_dialogControlWagons->exec();
-//}
+void Dialog_AddRace::on_buttonEditPassengers_clicked()
+{
+    m_dialogControlPassengers->exec();
+}
