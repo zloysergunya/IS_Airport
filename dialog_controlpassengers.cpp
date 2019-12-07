@@ -12,7 +12,7 @@ Dialog_ControlPassengers::Dialog_ControlPassengers(QList<Passenger> listPassenge
     m_listPassengers(listPassengers)
 {
     mUi->setupUi(this);
-    mUi->tableWagons->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
+    mUi->tablePassengers->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
     int row = 0;
     foreach (const Passenger &passenger, m_listPassengers) {
@@ -24,12 +24,12 @@ Dialog_ControlPassengers::Dialog_ControlPassengers(QList<Passenger> listPassenge
         QTableWidgetItem *item_flight = new QTableWidgetItem(passenger.flight());
 
 
-        mUi->tableWagons->insertRow(row);
-        mUi->tableWagons->setItem(row, 0, item_firstName);
-        mUi->tableWagons->setItem(row, 1, item_secondName);
-        mUi->tableWagons->setItem(row, 2, item_middleName);
-        mUi->tableWagons->setItem(row, 3, item_passport);
-        mUi->tableWagons->setItem(row, 4, item_flight);
+        mUi->tablePassengers->insertRow(row);
+        mUi->tablePassengers->setItem(row, 0, item_firstName);
+        mUi->tablePassengers->setItem(row, 1, item_secondName);
+        mUi->tablePassengers->setItem(row, 2, item_middleName);
+        mUi->tablePassengers->setItem(row, 3, item_passport);
+        mUi->tablePassengers->setItem(row, 4, item_flight);
         row++;
     }
 }
@@ -54,30 +54,30 @@ void Dialog_ControlPassengers::on_buttonAdd_clicked()
         QTableWidgetItem *item_passport = new QTableWidgetItem(passenger.passport());
         QTableWidgetItem *item_flight = new QTableWidgetItem(passenger.flight());
 
-        int row = mUi->tableWagons->rowCount();
-        mUi->tableWagons->insertRow(row);
-        mUi->tableWagons->setItem(row, 0, item_firstName);
-        mUi->tableWagons->setItem(row, 1, item_secondName);
-        mUi->tableWagons->setItem(row, 2, item_middleName);
-        mUi->tableWagons->setItem(row, 3, item_passport);
-        mUi->tableWagons->setItem(row, 4, item_flight);
+        int row = mUi->tablePassengers->rowCount();
+        mUi->tablePassengers->insertRow(row);
+        mUi->tablePassengers->setItem(row, 0, item_firstName);
+        mUi->tablePassengers->setItem(row, 1, item_secondName);
+        mUi->tablePassengers->setItem(row, 2, item_middleName);
+        mUi->tablePassengers->setItem(row, 3, item_passport);
+        mUi->tablePassengers->setItem(row, 4, item_flight);
     }
 }
 
 void Dialog_ControlPassengers::on_buttonEdit_clicked()
 {
-    int currentRow = mUi->tableWagons->currentRow();
+    int currentRow = mUi->tablePassengers->currentRow();
     if (currentRow != -1) {
         Passenger &passenger = m_listPassengers[currentRow];
         Dialog_AddPassenger dialog(&passenger, m_listPassengers, Dialog_AddPassenger::Edit, this);
         dialog.setWindowTitle(windowTitle());
 
         if (dialog.exec() == QDialog::Accepted) {
-            mUi->tableWagons->item(currentRow, 0)->setText(passenger.firstName());
-            mUi->tableWagons->item(currentRow, 1)->setText(passenger.secondName());
-            mUi->tableWagons->item(currentRow, 2)->setText(passenger.middleName());
-            mUi->tableWagons->item(currentRow, 3)->setText(passenger.passport());
-            mUi->tableWagons->item(currentRow, 4)->setText(passenger.flight());
+            mUi->tablePassengers->item(currentRow, 0)->setText(passenger.firstName());
+            mUi->tablePassengers->item(currentRow, 1)->setText(passenger.secondName());
+            mUi->tablePassengers->item(currentRow, 2)->setText(passenger.middleName());
+            mUi->tablePassengers->item(currentRow, 3)->setText(passenger.passport());
+            mUi->tablePassengers->item(currentRow, 4)->setText(passenger.flight());
         }
     }
     else {
@@ -87,10 +87,10 @@ void Dialog_ControlPassengers::on_buttonEdit_clicked()
 
 void Dialog_ControlPassengers::on_buttonDelete_clicked()
 {
-    int currentRow = mUi->tableWagons->currentRow();
+    int currentRow = mUi->tablePassengers->currentRow();
     if (currentRow != -1) {
         m_listPassengers.removeAt(currentRow);
-        mUi->tableWagons->removeRow(currentRow);
+        mUi->tablePassengers->removeRow(currentRow);
     }
     else {
         QMessageBox::warning(this, windowTitle(), "Ошибка: не выбран ни один пассажир!");
@@ -108,7 +108,7 @@ void Dialog_ControlPassengers::on_lineFind_textChanged(const QString &text)
     listStr.removeAll(QString());
 
     for (int i = 0; i < m_listPassengers.size(); i++) {
-        mUi->tableWagons->showRow(i);
+        mUi->tablePassengers->showRow(i);
     }
 
     int row = 0;
@@ -124,7 +124,7 @@ void Dialog_ControlPassengers::on_lineFind_textChanged(const QString &text)
             }
         }
         if (count != listStr.size()) {
-            mUi->tableWagons->hideRow(row);
+            mUi->tablePassengers->hideRow(row);
         }
         row++;
     }

@@ -32,10 +32,10 @@ void Dialog_MenuAdmin::on_buttonControlRaces_clicked()
     Dialog_ControlRaces dialog(listPlanes, this);
     dialog.setWindowTitle(windowTitle());
 
-    connect(&dialog, SIGNAL(addedRace(Train)),
-            parent(), SLOT(addRace(Train)));
-    connect(&dialog, SIGNAL(editedRace(int, Train)),
-            parent(), SLOT(editRace(int, Train)));
+    connect(&dialog, SIGNAL(addedRace(Plane)),
+            parent(), SLOT(addRace(Plane)));
+    connect(&dialog, SIGNAL(editedRace(int, Plane)),
+            parent(), SLOT(editRace(int, Plane)));
     connect(&dialog, SIGNAL(deletedRace(int)),
             parent(), SLOT(deleteRace(int)));
     dialog.exec();

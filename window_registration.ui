@@ -10,6 +10,11 @@
     <height>359</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Mongolian Baiti</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -18,6 +23,7 @@
     <widget class="QLabel" name="mainLabel">
      <property name="font">
       <font>
+       <family>Mongolian Baiti</family>
        <pointsize>20</pointsize>
        <weight>75</weight>
        <bold>true</bold>
@@ -43,6 +49,7 @@
       <widget class="QLabel" name="labelUser">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -58,6 +65,7 @@
       <widget class="QLineEdit" name="login">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -67,6 +75,7 @@
       <widget class="QLabel" name="labelPassword">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -82,6 +91,7 @@
       <widget class="QLineEdit" name="password">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -94,6 +104,7 @@
       <widget class="QLabel" name="labelRepeatPassword">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -109,6 +120,7 @@
       <widget class="QLineEdit" name="repeatPassword">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -154,6 +166,7 @@
          </property>
          <property name="font">
           <font>
+           <family>Mongolian Baiti</family>
            <pointsize>16</pointsize>
            <weight>75</weight>
            <bold>true</bold>
@@ -184,6 +197,7 @@
          </property>
          <property name="font">
           <font>
+           <family>Mongolian Baiti</family>
            <pointsize>14</pointsize>
           </font>
          </property>

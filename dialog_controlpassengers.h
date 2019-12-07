@@ -15,7 +15,7 @@ class Dialog_ControlPassengers : public QDialog
 public:
     explicit Dialog_ControlPassengers(QList<Passenger> listPassengers, QWidget *parent = nullptr);
     ~Dialog_ControlPassengers();
-    void setNumberPlane(const int &number_train);
+    void setNumberPlane(const int &number_plane);
     QList<Passenger> listPassengers() const;
 
 private slots:

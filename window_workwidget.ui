@@ -10,6 +10,11 @@
     <height>435</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Mongolian Baiti</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -20,6 +25,7 @@
       <widget class="QPushButton" name="infoUser">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -45,6 +51,7 @@
       <widget class="QPushButton" name="menuAdmin">
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -123,6 +130,7 @@
        </property>
        <property name="font">
         <font>
+         <family>Mongolian Baiti</family>
          <pointsize>10</pointsize>
         </font>
        </property>

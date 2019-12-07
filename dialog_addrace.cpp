@@ -55,19 +55,8 @@ void Dialog_AddRace::accept()
         countSeats == 0) {
         mUi->labelError->setText("Ошибка: заполните все поля!");
     }
-    else {
-        if (m_startNumberPlane != number) {
-            foreach (const Plane &plane, m_listPlanes) {
-                if (plane.number() == number) {
-                    mUi->labelError->setText("Ошибка: данный номер поезда занят!");
-                    return;
-                }
-            }
-        }
-
-        m_plane->setData(number, departure, arrival, mark, countSeats, countFreeSeats, m_dialogControlPassengers->listPassengers());
-        QDialog::accept();
-    }
+    m_plane->setData(number, departure, arrival, mark, countSeats, countFreeSeats, m_dialogControlPassengers->listPassengers());
+    QDialog::accept();
 }
 
 void Dialog_AddRace::on_buttonEditPassengers_clicked()

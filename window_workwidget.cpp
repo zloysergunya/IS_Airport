@@ -30,7 +30,7 @@ Window_WorkWidget::Window_WorkWidget(User &user, QWidget *parent) :
 		connect(mUi->tableRaces, SIGNAL(cellActivated(int, int)),
 				this, SLOT(menuCashier(int, int)));
 
-    loadTrains();
+    loadPlanes();
 }
 
 Window_WorkWidget::~Window_WorkWidget()
@@ -154,8 +154,8 @@ void Window_WorkWidget::menuCashier(int row, int /*column*/)
     const Plane &plane = m_listPlanes[row];
     Dialog_MenuCashier dialog(row, plane, this);
     dialog.setWindowTitle(Config::nameApplication);
-    connect(&dialog, SIGNAL(editedRace(int, Train)),
-            this, SLOT(editRace(int, Train)));
+    connect(&dialog, SIGNAL(editedRace(int, Plane)),
+            this, SLOT(editRace(int, Plane)));
 
     dialog.exec();
 }
@@ -165,7 +165,7 @@ const QList<Plane> &Window_WorkWidget::listPlanes() const
     return m_listPlanes;
 }
 
-void Window_WorkWidget::loadTrains()
+void Window_WorkWidget::loadPlanes()
 {
     m_listPlanes.clear();
 
@@ -174,9 +174,9 @@ void Window_WorkWidget::loadTrains()
         QDataStream ist(&file);
 
         while (!ist.atEnd()) {
-            Plane train;
-            ist >> train;
-            m_listPlanes.append(train);
+            Plane plane;
+            ist >> plane;
+            m_listPlanes.append(plane);
         }
     }
 

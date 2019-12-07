@@ -30,7 +30,12 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWagons">
+    <widget class="QTableWidget" name="tablePassengers">
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+      </font>
+     </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>

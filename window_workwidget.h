@@ -42,7 +42,7 @@ private:
 
     QList<Plane> m_listPlanes;
 
-    void loadTrains();
+    void loadPlanes();
 };
 
 #endif // WINDOW_WORKWIDGET_H
