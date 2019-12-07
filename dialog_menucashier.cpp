@@ -23,9 +23,9 @@ Dialog_MenuCashier::Dialog_MenuCashier(int row, const Plane &plane, QWidget *par
     mUi->countPassengers->setText(QString::number(m_plane.listPassengers().size()));
 
     int countFreePlace = 0;
-//    foreach (const Plane &i_plane, i_plane.listPassengers()) {
-//        countFreePlace += i_plane.countFreePlace();
-//    }
+    foreach (const Passenger &passenger, m_plane.listPassengers()) {
+        countFreePlace += m_plane.countFreeSeats();
+    }
 
     if (countFreePlace == 0) {
         mUi->countFreePlace->setText("Увы, мест нет. Возвращайтесь через 3 000 лет!");
