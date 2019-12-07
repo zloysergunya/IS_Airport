@@ -54,9 +54,10 @@ void Dialog_AddRace::accept()
         mark.isEmpty() ||
         countSeats == 0) {
         mUi->labelError->setText("Ошибка: заполните все поля!");
+    } else {
+        m_plane->setData(number, departure, arrival, mark, countSeats, countFreeSeats, m_dialogControlPassengers->listPassengers());
+        QDialog::accept();
     }
-    m_plane->setData(number, departure, arrival, mark, countSeats, countFreeSeats, m_dialogControlPassengers->listPassengers());
-    QDialog::accept();
 }
 
 void Dialog_AddRace::on_buttonEditPassengers_clicked()

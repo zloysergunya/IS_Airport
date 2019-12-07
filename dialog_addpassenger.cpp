@@ -45,7 +45,8 @@ void Dialog_AddPassenger::accept()
         passport.isEmpty() ||
         flight.isEmpty()) {
         mUi->labelError->setText("Ошибка: заполните все поля!");
-    }
+    } else {
         m_passenger->setData(firstName, secondName, middleName, passport, flight);
         QDialog::accept();
+    }
 }
