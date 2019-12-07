@@ -62,6 +62,7 @@ void Dialog_ControlRaces::on_buttonAddRace_clicked()
         QTableWidgetItem *item_countPassengers = new QTableWidgetItem(QString::number(plane.listPassengers().size()));
 
         int row = mUi->tableRaces->rowCount();
+        mUi->tableRaces->insertRow(row);
         mUi->tableRaces->setItem(row, 0, item_number);
         mUi->tableRaces->setItem(row, 1, item_departure);
         mUi->tableRaces->setItem(row, 2, item_arrival);

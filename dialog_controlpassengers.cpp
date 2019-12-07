@@ -55,6 +55,7 @@ void Dialog_ControlPassengers::on_buttonAdd_clicked()
         QTableWidgetItem *item_flight = new QTableWidgetItem(passenger.flight());
 
         int row = mUi->tableWagons->rowCount();
+        mUi->tableWagons->insertRow(row);
         mUi->tableWagons->setItem(row, 0, item_firstName);
         mUi->tableWagons->setItem(row, 1, item_secondName);
         mUi->tableWagons->setItem(row, 2, item_middleName);
