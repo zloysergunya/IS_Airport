@@ -72,3 +72,31 @@ void Passenger::setFlight(const QString &flight)
 {
     m_flight = flight;
 }
+
+QList<Ticket> Passenger::listTickets() const
+{
+    return m_listTickets;
+}
+
+void Passenger::setListTickets(const QList<Ticket> &listTickets)
+{
+    m_listTickets = listTickets;
+}
+
+void Passenger::buyOneTicket(Ticket ticket)
+{
+    m_listTickets.append(ticket);
+}
+
+bool Passenger::handOverOneTicket(const QString &id_ticket)
+{
+    int i = 0;
+    foreach (const Ticket &ticket, m_listTickets) {
+        if (ticket.id() == id_ticket) {
+            m_listTickets.removeAt(i);
+            return true;
+        }
+        i++;
+    }
+    return false;
+}

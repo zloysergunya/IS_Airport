@@ -53,22 +53,27 @@
      </column>
      <column>
       <property name="text">
-       <string>Вагон</string>
+       <string>Новый столбец</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Тип вагона</string>
+       <string>Пункт отправления</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Цена</string>
+       <string>Пункт прибытия</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Дата и время покупки</string>
+       <string>Номер самолета</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Дата и время</string>
       </property>
      </column>
     </widget>

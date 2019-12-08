@@ -5,6 +5,8 @@
 #include <QDataStream>
 #include <QTextStream>
 
+#include "ticket.h"
+
 class Passenger
 {
 public:
@@ -28,12 +30,19 @@ public:
     QString flight() const;
     void setFlight(const QString &flight);
 
+    QList<Ticket> listTickets() const;
+    void setListTickets(const QList<Ticket> &listTickets);
+
+    void buyOneTicket(Ticket ticket);
+    bool handOverOneTicket(const QString &id_ticket);
+
 private:
     QString m_firstName;
     QString m_secondName;
     QString m_middleName;
     QString m_passport;
     QString m_flight;
+    QList<Ticket> m_listTickets;
 };
 
 inline QDataStream &operator<< (QDataStream &ost, const Passenger &passenger)

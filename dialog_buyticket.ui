@@ -28,7 +28,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Выберите вагон для покупки билета</string>
+      <string>Выберите пассажира для покупки билета</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -36,7 +36,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWagons">
+    <widget class="QTableWidget" name="tablePassengers">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
@@ -57,27 +57,22 @@
      </attribute>
      <column>
       <property name="text">
-       <string>Номер</string>
+       <string>Имя</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Тип</string>
+       <string>Фамилия</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Число мест</string>
+       <string>Отчество</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Свободно мест</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Стоимость билета</string>
+       <string>Паспорт</string>
       </property>
      </column>
     </widget>

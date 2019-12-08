@@ -17,9 +17,9 @@ public:
     ~Dialog_MenuCashier();
 
 private slots:
-//    void on_buttonBuyTicket_clicked();
+    void on_buttonBuyTicket_clicked();
 //    void on_buttonHandOverTicket_clicked();
-//    void on_buttonCheckTickets_clicked();
+    void on_buttonCheckTickets_clicked();
     void on_buttonReferenceRace_clicked();
 
 signals:

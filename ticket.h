@@ -10,9 +10,9 @@ class Ticket
 {
 public:
     Ticket();
-    Ticket(int number, int numPlane, int numPassenger, const QString &departure, const QString &arrival);
+    Ticket(int number, const QString &numPlane, const QString &numPassenger, const QString &departure, const QString &arrival);
 
-    void setData(int number, int numPlane, int numPassenger, const QString &departure, const QString &arrival);
+    void setData(int number, const QString &numPlane, const QString &numPassenger, const QString &departure, const QString &arrival);
 
     int number() const;
     void setNumber(int number);
@@ -20,11 +20,11 @@ public:
     QString id() const;
     void setId(const QString &id);
 
-    int numberPlane() const;
-    void setNumberPlane(int numberPlane);
+    QString numberPlane() const;
+    void setNumberPlane(const QString &numberPlane);
 
-    int numberPassenger() const;
-    void setNumberPassenger(int numberPassenger);
+    QString numberPassenger() const;
+    void setNumberPassenger(const QString &numberPassenger);
 
     QString departure() const;
     void setDeparture(const QString &departure);
@@ -39,8 +39,8 @@ private:
     int m_number;
     QString m_id;
     QDateTime m_dateTimeBuy;
-    int m_numberPlane;
-    int m_numberPassenger;
+    QString m_numberPlane;
+    QString m_numberPassenger;
     QString m_departure;
     QString m_arrival;
 };
@@ -53,11 +53,11 @@ inline QDataStream &operator<< (QDataStream &ost, const Ticket &ticket)
 
 inline QDataStream &operator>> (QDataStream &ist, Ticket &ticket)
 {
-    int number, numberTrain, numberWagon;
-    QString departure, arrival, id;
+    int number;
+    QString departure, arrival, id, numberPlane, numberPassenger;
     QDateTime dateTime;
-    ist >> number >> numberTrain >> numberWagon >> departure >> arrival >> id >> dateTime;
-    ticket.setData(number, numberTrain, numberWagon, departure, arrival);
+    ist >> number >> numberPlane >> numberPassenger >> departure >> arrival >> id >> dateTime;
+    ticket.setData(number, numberPlane, numberPassenger, departure, arrival);
     ticket.setId(id);
     ticket.setDateTimeBuy(dateTime);
 

@@ -10,7 +10,7 @@ Dialog_AddPassenger::Dialog_AddPassenger(Passenger *passenger, const QList<Passe
     m_listPassengers(listPassengers)
 {
     mUi->setupUi(this);
-
+    this->setStyleSheet("background-color: #a8faff;");
     if (type == Edit) {
         mUi->mainLabel->setText("Редактирование пассажира");
         mUi->firstName->setText(passenger->firstName());

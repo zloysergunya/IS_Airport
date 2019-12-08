@@ -33,12 +33,15 @@ SOURCES += \
         dialog_addpassenger.cpp \
         dialog_addrace.cpp \
         dialog_adduser.cpp \
+        dialog_buyticket.cpp \
         dialog_controlpassengers.cpp \
         dialog_controlraces.cpp \
         dialog_controlusers.cpp \
+        dialog_hangoverticket.cpp \
         dialog_infouser.cpp \
         dialog_menuadmin.cpp \
         dialog_menucashier.cpp \
+        dialog_showtickets.cpp \
         passenger.cpp \
         plane.cpp \
         ticket.cpp \
@@ -54,12 +57,15 @@ HEADERS += \
         dialog_addpassenger.h \
         dialog_addrace.h \
         dialog_adduser.h \
+        dialog_buyticket.h \
         dialog_controlpassengers.h \
         dialog_controlraces.h \
         dialog_controlusers.h \
+        dialog_hangoverticket.h \
         dialog_infouser.h \
         dialog_menuadmin.h \
         dialog_menucashier.h \
+        dialog_showtickets.h \
         passenger.h \
         plane.h \
         ticket.h \

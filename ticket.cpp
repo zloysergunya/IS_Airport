@@ -5,12 +5,12 @@ Ticket::Ticket()
 
 }
 
-Ticket::Ticket(int number, int numPlane, int numPassenger, const QString &departure, const QString &arrival)
+Ticket::Ticket(int number, const QString &numPlane, const QString &numPassenger, const QString &departure, const QString &arrival)
 {
     setData(number, numPlane, numPassenger, departure, arrival);
 }
 
-void Ticket::setData(int number, int numPlane, int numPassenger, const QString &departure, const QString &arrival)
+void Ticket::setData(int number, const QString &numPlane, const QString &numPassenger, const QString &departure, const QString &arrival)
 {
     m_number = number;
     m_numberPlane = numPlane;
@@ -39,24 +39,24 @@ void Ticket::setId(const QString &id)
     m_id = id;
 }
 
-int Ticket::numberPlane() const
+QString Ticket::numberPlane() const
 {
     return m_numberPlane;
 }
 
-void Ticket::setNumberPlane(int numberTrain)
+void Ticket::setNumberPlane(const QString &numberPlane)
 {
-    m_numberPlane = numberTrain;
+    m_numberPlane = numberPlane;
 }
 
-int Ticket::numberPassenger() const
+QString Ticket::numberPassenger() const
 {
     return m_numberPassenger;
 }
 
-void Ticket::setNumberPassenger(int numberWagon)
+void Ticket::setNumberPassenger(const QString &numberPassenger)
 {
-    m_numberPassenger = numberWagon;
+    m_numberPassenger = numberPassenger;
 }
 
 QString Ticket::departure() const
