@@ -12,6 +12,7 @@ Dialog_ControlPassengers::Dialog_ControlPassengers(QList<Passenger> listPassenge
     m_listPassengers(listPassengers)
 {
     mUi->setupUi(this);
+    this->setStyleSheet("background-color: #a8faff;");
     mUi->tablePassengers->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
     int row = 0;

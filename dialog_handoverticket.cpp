@@ -11,6 +11,7 @@ Dialog_HandOverTicket::Dialog_HandOverTicket(const QList<Passenger> &listPasseng
     m_listPassengers(listPassengers)
 {
     mUi->setupUi(this);
+    this->setStyleSheet("background-color: #a8faff;");
     mUi->tableWagons->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
     int row = 0;
@@ -48,7 +49,7 @@ void Dialog_HandOverTicket::accept()
         Passenger &passenger = m_listPassengers[currentRow];
 
         if (passenger.countBuyPlace() == 0) {
-            mUi->labelError->setText("Ошибка: на данный вагон не куплен ни один билет!");
+            mUi->labelError->setText("Ошибка: для данного пассажира не куплен ни один билет!");
         }
         else {
             QInputDialog dialog(this);
@@ -68,6 +69,6 @@ void Dialog_HandOverTicket::accept()
         }
     }
     else {
-        mUi->labelError->setText("Ошибка: выберите вагон!");
+        mUi->labelError->setText("Ошибка: выберите пассажира!");
     }
 }

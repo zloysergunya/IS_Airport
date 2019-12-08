@@ -11,6 +11,7 @@ Dialog_ShowTickets::Dialog_ShowTickets(const Plane &plane, QWidget *parent) :
     mUi(new Ui::Dialog_ShowTickets)
 {
     mUi->setupUi(this);
+    this->setStyleSheet("background-color: #a8faff;");
     mUi->tableTickets->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
     int row = 0;

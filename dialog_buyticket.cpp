@@ -15,6 +15,7 @@ Dialog_BuyTicket::Dialog_BuyTicket(const Plane &plane, QWidget *parent) :
     m_plane(plane)
 {
     mUi->setupUi(this);
+    this->setStyleSheet("background-color: #a8faff;");
     mUi->tablePassengers->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 
     int row = 0;

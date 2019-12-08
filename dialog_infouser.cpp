@@ -10,7 +10,11 @@ Dialog_InfoUser::Dialog_InfoUser(const User &user, QWidget *parent) :
     mUi->setupUi(this);
     this->setStyleSheet("background-color: #a8faff;");
     mUi->labelLogin->setText(user.login());
-    mUi->labelPassword->setText(user.password());
+    QString pass = "";
+    for (int i = 0; i < user.password().size(); i++) {
+        pass += '*';
+    }
+    mUi->labelPassword->setText(pass);
     mUi->labelStatus->setText(user.statusString());
 }
 
