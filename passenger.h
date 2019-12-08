@@ -36,6 +36,8 @@ public:
     void buyOneTicket(Ticket ticket);
     bool handOverOneTicket(const QString &id_ticket);
 
+    int countBuyPlace() const;
+
 private:
     QString m_firstName;
     QString m_secondName;

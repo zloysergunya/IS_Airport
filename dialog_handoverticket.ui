@@ -28,7 +28,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Выберите вагон для сдачи билета</string>
+      <string>Выберите пассажира для сдачи билета</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

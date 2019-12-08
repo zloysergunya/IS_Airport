@@ -37,7 +37,7 @@ SOURCES += \
         dialog_controlpassengers.cpp \
         dialog_controlraces.cpp \
         dialog_controlusers.cpp \
-        dialog_hangoverticket.cpp \
+        dialog_handoverticket.cpp \
         dialog_infouser.cpp \
         dialog_menuadmin.cpp \
         dialog_menucashier.cpp \
@@ -61,7 +61,7 @@ HEADERS += \
         dialog_controlpassengers.h \
         dialog_controlraces.h \
         dialog_controlusers.h \
-        dialog_hangoverticket.h \
+        dialog_handoverticket.h \
         dialog_infouser.h \
         dialog_menuadmin.h \
         dialog_menucashier.h \

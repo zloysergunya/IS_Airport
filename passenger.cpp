@@ -88,6 +88,12 @@ void Passenger::buyOneTicket(Ticket ticket)
     m_listTickets.append(ticket);
 }
 
+int Passenger::countBuyPlace() const
+{
+    return m_listTickets.size();
+}
+
+
 bool Passenger::handOverOneTicket(const QString &id_ticket)
 {
     int i = 0;
