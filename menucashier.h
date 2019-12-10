@@ -1,5 +1,5 @@
-#ifndef DIALOG_MENUCASHIER_H
-#define DIALOG_MENUCASHIER_H
+#ifndef MENUCASHIER_H
+#define MENUCASHIER_H
 
 #include <QDialog>
 #include "plane.h"
@@ -31,4 +31,4 @@ private:
     int m_rowPlane;
 };
 
-#endif // DIALOG_MENUCASHIER_H
+#endif // MENUCASHIER_H

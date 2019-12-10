@@ -1,5 +1,5 @@
-#ifndef DIALOG_MENUADMIN_H
-#define DIALOG_MENUADMIN_H
+#ifndef MENUADMIN_H
+#define MENUADMIN_H
 
 #include <QDialog>
 
@@ -23,4 +23,4 @@ private:
     Ui::MenuAdmin *mUi;
 };
 
-#endif // DIALOG_MENUADMIN_H
+#endif // MENUADMIN_H

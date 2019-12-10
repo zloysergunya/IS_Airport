@@ -1,5 +1,5 @@
-#ifndef DIALOG_ADDWAGON_H
-#define DIALOG_ADDWAGON_H
+#ifndef ADDPASSENGER_H
+#define ADDPASSENGER_H
 
 #include <QDialog>
 class Passenger;
@@ -28,4 +28,4 @@ public slots:
     void accept();
 };
 
-#endif // DIALOG_ADDWAGON_H
+#endif // ADDPASSENGER_H

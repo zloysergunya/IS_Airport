@@ -1,5 +1,5 @@
-#ifndef DIALOG_CONTROLRACES_H
-#define DIALOG_CONTROLRACES_H
+#ifndef CONTROLRACES_H
+#define CONTROLRACES_H
 
 #include <QDialog>
 #include "plane.h"
@@ -33,4 +33,4 @@ signals:
     void deletedRace(int);
 };
 
-#endif // DIALOG_CONTROLRACES_H
+#endif // CONTROLRACES_H

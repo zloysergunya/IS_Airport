@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_ShowTickets</class>
- <widget class="QDialog" name="Dialog_ShowTickets">
+ <class>ShowTickets</class>
+ <widget class="QDialog" name="ShowTickets">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -115,7 +115,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ShowTickets</receiver>
+   <receiver>ShowTickets</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

@@ -1,5 +1,5 @@
-#ifndef DIALOG_ADDRACE_H
-#define DIALOG_ADDRACE_H
+#ifndef ADDRACE_H
+#define ADDRACE_H
 
 #include <QDialog>
 class Plane;
@@ -34,4 +34,4 @@ private slots:
     void on_buttonEditPassengers_clicked();
 };
 
-#endif // DIALOG_ADDRACE_H
+#endif // ADDRACE_H

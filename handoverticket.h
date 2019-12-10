@@ -1,5 +1,5 @@
-#ifndef DIALOG_HANDOVERTICKET_H
-#define DIALOG_HANDOVERTICKET_H
+#ifndef HANDOVERTICKET_H
+#define HANDOVERTICKET_H
 
 #include <QDialog>
 #include "passenger.h"
@@ -26,4 +26,4 @@ public slots:
     void accept();
 };
 
-#endif // DIALOG_HANDOVERTICKET_H
+#endif // HANDOVERTICKET_H

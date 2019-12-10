@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_InfoUser</class>
- <widget class="QDialog" name="Dialog_InfoUser">
+ <class>InfoUser</class>
+ <widget class="QDialog" name="InfoUser">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -202,7 +202,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_InfoUser</receiver>
+   <receiver>InfoUser</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -218,7 +218,7 @@
   <connection>
    <sender>buttonExit</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_InfoUser</receiver>
+   <receiver>InfoUser</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

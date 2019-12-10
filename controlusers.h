@@ -1,5 +1,5 @@
-#ifndef DIALOG_CONTROLUSERS_H
-#define DIALOG_CONTROLUSERS_H
+#ifndef CONTROLUSERS_H
+#define CONTROLUSERS_H
 
 #include <QDialog>
 #include "user.h"
@@ -28,4 +28,4 @@ private:
     int countAdmins() const;
 };
 
-#endif // DIALOG_CONTROLUSERS_H
+#endif // CONTROLUSERS_H

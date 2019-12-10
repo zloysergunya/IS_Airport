@@ -1,5 +1,5 @@
-#ifndef WINDOW_REGISTRATION_H
-#define WINDOW_REGISTRATION_H
+#ifndef SIGNUP_H
+#define SIGNUP_H
 
 #include <QWidget>
 
@@ -29,4 +29,4 @@ private slots:
 	void on_buttonCreate_clicked();
 };
 
-#endif // WINDOW_REGISTRATION_H
+#endif // SIGNUP_H

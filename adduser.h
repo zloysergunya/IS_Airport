@@ -1,5 +1,5 @@
-#ifndef DIALOG_ADDUSER_H
-#define DIALOG_ADDUSER_H
+#ifndef ADDUSER_H
+#define ADDUSER_H
 
 #include <QDialog>
 #include "user.h"
@@ -26,4 +26,4 @@ public slots:
     bool isLoginExists(const QString &login);
 };
 
-#endif // DIALOG_ADDUSER_H
+#endif // ADDUSER_H

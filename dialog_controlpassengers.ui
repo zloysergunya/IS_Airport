@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_ControlPassengers</class>
- <widget class="QDialog" name="Dialog_ControlPassengers">
+ <class>ControlPassengers</class>
+ <widget class="QDialog" name="ControlPassengers">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -56,12 +56,12 @@
      </attribute>
      <column>
       <property name="text">
-       <string>Имя</string>
+       <string>Фамилия</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Фамилия</string>
+       <string>Имя</string>
       </property>
      </column>
      <column>
@@ -235,7 +235,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ControlPassengers</receiver>
+   <receiver>ControlPassengers</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

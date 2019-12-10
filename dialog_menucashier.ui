@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_MenuCashier</class>
- <widget class="QDialog" name="Dialog_MenuCashier">
+ <class>MenuCashier</class>
+ <widget class="QDialog" name="MenuCashier">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -155,7 +155,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Просмотр билетов</string>
+      <string>Просмотреть билеты</string>
      </property>
     </widget>
    </item>
@@ -182,19 +182,6 @@
      </property>
      <property name="text">
       <string>Сдать билет</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="buttonReferenceRace">
-     <property name="font">
-      <font>
-       <family>Mongolian Baiti</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Справка о рейсе</string>
      </property>
     </widget>
    </item>
@@ -248,7 +235,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_MenuCashier</receiver>
+   <receiver>MenuCashier</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

@@ -1,5 +1,5 @@
-#ifndef DIALOG_INFOUSER_H
-#define DIALOG_INFOUSER_H
+#ifndef INFOUSER_H
+#define INFOUSER_H
 
 #include <QDialog>
 class User;
@@ -21,4 +21,4 @@ private:
     Ui::InfoUser *mUi;
 };
 
-#endif // DIALOG_INFOUSER_H
+#endif // INFOUSER_H

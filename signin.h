@@ -1,5 +1,5 @@
-#ifndef WINDOW_AUTHORIZATION_H
-#define WINDOW_AUTHORIZATION_H
+#ifndef SIGNIN_H
+#define SIGNIN_H
 
 #include <QWidget>
 class User;
@@ -29,4 +29,4 @@ private slots:
 	void on_buttonEntry_clicked();
 };
 
-#endif // WINDOW_AUTHORIZATION_H
+#endif // SIGNIN_H

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_AddUser</class>
- <widget class="QDialog" name="Dialog_AddUser">
+ <class>AddUser</class>
+ <widget class="QDialog" name="AddUser">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -193,7 +193,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog_AddUser</receiver>
+   <receiver>AddUser</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -209,7 +209,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog_AddUser</receiver>
+   <receiver>AddUser</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

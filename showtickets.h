@@ -1,5 +1,5 @@
-#ifndef DIALOG_SHOWTICKETS_H
-#define DIALOG_SHOWTICKETS_H
+#ifndef SHOWTICKETS_H
+#define SHOWTICKETS_H
 
 #include <QDialog>
 class Plane;
@@ -20,4 +20,4 @@ private:
     Ui::ShowTickets *mUi;
 };
 
-#endif // DIALOG_SHOWTICKETS_H
+#endif // SHOWTICKETS_H

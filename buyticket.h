@@ -1,5 +1,5 @@
-#ifndef DIALOG_BUYTICKET_H
-#define DIALOG_BUYTICKET_H
+#ifndef BUYTICKET_H
+#define BUYTICKET_H
 
 #include <QDialog>
 #include "passenger.h"
@@ -29,4 +29,4 @@ public slots:
     void accept();
 };
 
-#endif // DIALOG_BUYTICKET_H
+#endif // BUYTICKET_H

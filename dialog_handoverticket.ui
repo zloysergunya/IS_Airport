@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_HandOverTicket</class>
- <widget class="QDialog" name="Dialog_HandOverTicket">
+ <class>HandOverTicket</class>
+ <widget class="QDialog" name="HandOverTicket">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -106,7 +106,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog_HandOverTicket</receiver>
+   <receiver>HandOverTicket</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -122,7 +122,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog_HandOverTicket</receiver>
+   <receiver>HandOverTicket</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

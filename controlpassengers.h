@@ -1,5 +1,5 @@
-#ifndef DIALOG_CONTROLWAGONS_H
-#define DIALOG_CONTROLWAGONS_H
+#ifndef CONTROLWAGONS_H
+#define CONTROLWAGONS_H
 
 #include <QDialog>
 class Passenger;
@@ -29,4 +29,4 @@ private:
     QList<Passenger> m_listPassengers;
 };
 
-#endif // DIALOG_CONTROLWAGONS_H
+#endif // CONTROLWAGONS_H

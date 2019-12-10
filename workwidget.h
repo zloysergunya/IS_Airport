@@ -1,5 +1,5 @@
-#ifndef WINDOW_WORKWIDGET_H
-#define WINDOW_WORKWIDGET_H
+#ifndef WORKWIDGET_H
+#define WORKWIDGET_H
 
 #include <QWidget>
 #include "plane.h"
@@ -45,4 +45,4 @@ private:
     void loadPlanes();
 };
 
-#endif // WINDOW_WORKWIDGET_H
+#endif // WORKWIDGET_H

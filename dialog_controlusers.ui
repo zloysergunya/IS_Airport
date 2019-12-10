@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_ControlUsers</class>
- <widget class="QDialog" name="Dialog_ControlUsers">
+ <class>ControlUsers</class>
+ <widget class="QDialog" name="ControlUsers">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -221,7 +221,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ControlUsers</receiver>
+   <receiver>ControlUsers</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -237,7 +237,7 @@
   <connection>
    <sender>buttonUpStatus</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ControlUsers</receiver>
+   <receiver>ControlUsers</receiver>
    <slot>slotUpAndDownStatus()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -253,7 +253,7 @@
   <connection>
    <sender>buttonDownStatus</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_ControlUsers</receiver>
+   <receiver>ControlUsers</receiver>
    <slot>slotUpAndDownStatus()</slot>
    <hints>
     <hint type="sourcelabel">

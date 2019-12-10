@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_MenuAdmin</class>
- <widget class="QDialog" name="Dialog_MenuAdmin">
+ <class>MenuAdmin</class>
+ <widget class="QDialog" name="MenuAdmin">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -98,7 +98,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Я прекрасен</string>
+        <string>Я велик и ужасен</string>
        </property>
       </widget>
      </item>
@@ -111,7 +111,7 @@
   <connection>
    <sender>accept</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog_MenuAdmin</receiver>
+   <receiver>MenuAdmin</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

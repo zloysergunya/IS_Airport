@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_AddRace</class>
- <widget class="QDialog" name="Dialog_AddRace">
+ <class>AddRace</class>
+ <widget class="QDialog" name="AddRace">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -220,7 +220,11 @@
      </widget>
     </item>
     <item row="6" column="1" colspan="3">
-     <widget class="QSpinBox" name="edit_countSeats"/>
+     <widget class="QSpinBox" name="edit_countSeats">
+      <property name="maximum">
+       <number>999</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -230,7 +234,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog_AddRace</receiver>
+   <receiver>AddRace</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -246,7 +250,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog_AddRace</receiver>
+   <receiver>AddRace</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
