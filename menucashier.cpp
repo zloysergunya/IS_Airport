@@ -22,10 +22,10 @@ MenuCashier::MenuCashier(int row, const Plane &plane, QWidget *parent) :
     mUi->numberPlane->setText(m_plane.number());
     mUi->countPassengers->setText(QString::number(m_plane.listPassengers().size()));
 
-    int countFreePlace = 0;
-    foreach (const Passenger &passenger, m_plane.listPassengers()) {
-        countFreePlace += m_plane.countFreeSeats();
-    }
+    int countFreePlace = m_plane.countFreeSeats();
+//    foreach (const Passenger &passenger, m_plane.listPassengers()) {
+//        countFreePlace += m_plane.countFreeSeats();
+//    }
 
     if (countFreePlace == 0) {
         mUi->countFreePlace->setText("Увы, мест нет. Возвращайтесь через 3 000 лет!");

@@ -64,8 +64,9 @@ void MainWidget::slotOpenWorkWidget(User *user)
 {
     delete m_currentWidget;
     m_currentWidget = new WorkWidget(*user, this);
+    this->resize(900, 400);
     connect(m_currentWidget, SIGNAL(changeUser()),
-            this, SLOT(slotOpenAuthorization()));
+            this, SLOT(slotpenAuthorization()));
     layout()->addWidget(m_currentWidget);
 }
 

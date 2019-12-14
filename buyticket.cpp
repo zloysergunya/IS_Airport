@@ -53,7 +53,7 @@ void BuyTicket::accept()
     if (currentRow != -1) {
         Passenger &passenger = m_listPassengers[currentRow];
 
-        if (/*wagon.countFreePlace() == 0*/false) {
+        if (m_plane.countFreeSeats() == 0) {
             mUi->labelError->setText("Ошибка: на данный вагон нет мест!");
         }
         else {

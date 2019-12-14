@@ -50,7 +50,7 @@ private:
 
 inline QDataStream &operator<< (QDataStream &ost, const Plane &plane)
 {
-    ost << plane.number() << plane.departure() << plane.arrival() << plane.mark() << plane.countSeats() << plane.countFreeSeats();
+    ost << plane.number() << plane.departure() << plane.arrival() << plane.mark() << plane.countSeats() << plane.countFreeSeats() << plane.listPassengers().size();
     foreach (const Passenger &passenger, plane.listPassengers()) {
         ost << passenger;
     }

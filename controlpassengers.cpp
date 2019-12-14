@@ -24,7 +24,6 @@ ControlPassengers::ControlPassengers(QList<Passenger> listPassengers, QWidget *p
         QTableWidgetItem *item_passport = new QTableWidgetItem(passenger.passport());
         QTableWidgetItem *item_flight = new QTableWidgetItem(passenger.flight());
 
-
         mUi->tablePassengers->insertRow(row);
         mUi->tablePassengers->setItem(row, 0, item_firstName);
         mUi->tablePassengers->setItem(row, 1, item_secondName);

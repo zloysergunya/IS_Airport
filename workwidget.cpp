@@ -79,12 +79,12 @@ void WorkWidget::editRace(int row, Plane plane)
         QDataStream read_ist(&read_file);
         QDataStream write_ist(&write_file);
 
-        int countReads = 0;
+        int countSeats = 0;
         while (!read_ist.atEnd()) {
             Plane buf_plane;
             read_ist >> buf_plane;
 
-            if (countReads++ == row) {
+            if (countSeats++ == row) {
                 buf_plane = plane;
             }
 
@@ -96,7 +96,7 @@ void WorkWidget::editRace(int row, Plane plane)
         write_file.close();
         write_file.rename(Config::filePlanes);
     }
-
+    plane.setCountFreeSeats(plane.countFreeSeats() - 1);
     mUi->tableRaces->item(row, 0)->setText(plane.number());
     mUi->tableRaces->item(row, 1)->setText(plane.departure());
     mUi->tableRaces->item(row, 2)->setText(plane.arrival());
